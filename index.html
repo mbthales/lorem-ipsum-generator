@@ -8,15 +8,18 @@
   </head>
   <body>
     <h1>Lorem Ipsum Generator</h1>
-    <textarea cols="30" rows="10"></textarea>
-    <form id="lorem-ipsum-values">
+    <textarea id="lorem-ipsum-text" cols="30" rows="10"></textarea>
+    <button type="button" id="btn-copy-lorem-ipsum" data-clipboard-target="#lorem-ipsum-text">
+      Copy
+    </button>
+    <form>
       <fieldset id="lorem-ipsum-types">
         <label for="word">Word</label>
         <input type="radio" id="word" name="lorem-ipsum-type" value="word" checked> 
-        <label for="paragraph">Paragraph</label>
-        <input type="radio" id="paragraph" name="lorem-ipsum-type" value="paragraph">
         <label for="sentence">Sentence</label>
         <input type="radio" id="sentence" name="lorem-ipsum-type" value="sentence">
+        <label for="paragraph">Paragraph</label>
+        <input type="radio" id="paragraph" name="lorem-ipsum-type" value="paragraph">
       </fieldset>
       <fieldset>
         <label for="quantity">Quantity</label>
