@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+$primary-300: #CC9090;
+$neutral-900: #150B0B;
+$neutral-100: #EBEAEA;
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 8px;
+  background-color: $neutral-100;
+
+  &, body, main{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.title{
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 25rem;
+  margin-bottom: 5rem;
+  font-family: 'Libre Baskerville', serif;
+  color: $neutral-900;
+}
+
+#lorem-ipsum-text{
+  width: 41rem;
+  height: 20rem;
+  display: block;
+  margin: 0 auto;
+  background: $neutral-100;
+  border: 2px solid #150B0B;
+  font-size: 1.5rem;
+  font-family: 'Source Sans Pro', serif;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  resize: none;
+}
+
+.lorem-ipsum-inputs{
+  padding-left: 4rem;
+}
+
+#btn-generate-lorem-ipsum{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 20rem;
+  height: 7rem;
+  margin-top: 5rem;
+  border-radius: 4px;
+  background-color: $primary-300;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Source Sans Pro', serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+

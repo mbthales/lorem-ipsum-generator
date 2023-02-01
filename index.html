@@ -2,32 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Lorem Ipsum Generator</title>
+    <link rel="stylesheet" href="./src/style.scss">
   </head>
   <body>
-    <h1>Lorem Ipsum Generator</h1>
-    <textarea id="lorem-ipsum-text" cols="30" rows="10"></textarea>
-    <button type="button" id="btn-copy-lorem-ipsum" data-clipboard-target="#lorem-ipsum-text">
-      Copy
-    </button>
-    <form>
-      <fieldset id="lorem-ipsum-types">
-        <label for="word">Word</label>
-        <input type="radio" id="word" name="lorem-ipsum-type" value="word" checked> 
-        <label for="sentence">Sentence</label>
-        <input type="radio" id="sentence" name="lorem-ipsum-type" value="sentence">
-        <label for="paragraph">Paragraph</label>
-        <input type="radio" id="paragraph" name="lorem-ipsum-type" value="paragraph">
-      </fieldset>
-      <fieldset>
-        <label for="quantity">Quantity</label>
-        <input type="number" id="quantity" name="lorem-ipsum-quantity" id="quantity" value="1">
-      </fieldset>
-      <button type="button" id="btn-generate-lorem-ipsum">Generate my text</button>
-    </form>
-    <div id="app"></div>
+    <main>
+      <h1 class="title">Lorem Ipsum Generator</h1>
+      <textarea id="lorem-ipsum-text" cols="30" rows="10"></textarea>
+      <!-- <button type="button" id="btn-copy-lorem-ipsum" data-clipboard-target="#lorem-ipsum-text">
+        Copy
+      </button> -->
+      <form class="lorem-ipsum-inputs">
+        <fieldset id="lorem-ipsum-types">
+          <label for="word">Word</label>
+          <input type="radio" id="word" name="lorem-ipsum-type" value="word" checked> 
+          <label for="sentence">Sentence</label>
+          <input type="radio" id="sentence" name="lorem-ipsum-type" value="sentence">
+          <label for="paragraph">Paragraph</label>
+          <input type="radio" id="paragraph" name="lorem-ipsum-type" value="paragraph">
+        </fieldset>
+        <fieldset>
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" name="lorem-ipsum-quantity" id="quantity" value="1">
+        </fieldset>
+        <button type="button" id="btn-generate-lorem-ipsum">Generate my text</button>
+      </form>
+    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
