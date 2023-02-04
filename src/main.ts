@@ -2,7 +2,8 @@ import { LoremIpsum } from "lorem-ipsum";
 import ClipboardJS  from "clipboard";
 
 const getLoremIpsumTypeInputValue = () => {
-  const loremIpsumTypesInputs: NodeListOf<HTMLInputElement> = document.querySelectorAll("input[name=lorem-ipsum-type]");
+  const loremIpsumTypesInputs: NodeListOf<HTMLInputElement> = document.querySelectorAll
+  ("[data-js='lorem-input-type']");
   let loremIpsumType = "word";
 
   loremIpsumTypesInputs.forEach(({checked, value}) => {
@@ -15,7 +16,7 @@ const getLoremIpsumTypeInputValue = () => {
 };
 
 const getLoremIpsumQuantityInputValue = () => {
-  const loremIpsumQuantityInput = <HTMLInputElement>document.querySelector("input[name=lorem-ipsum-quantity]");
+  const loremIpsumQuantityInput = <HTMLInputElement>document.querySelector("[data-js='lorem-input-quantity']");
   const loremIpsumQuantityInputValue = loremIpsumQuantityInput.value;
 
   return parseFloat(loremIpsumQuantityInputValue);
@@ -35,17 +36,17 @@ const getLoremIpsum = (type: string, quantity: number) => {
 };
 
 const putLoremIpsumInTextArea = (loremIpsum: string) => {
-  const loremIpsumTextArea = <HTMLInputElement>document.getElementById("lorem-ipsum-text");
+  const loremIpsumTextArea = <HTMLInputElement>document.querySelector("[data-js='lorem-text']");
 
   loremIpsumTextArea.value = loremIpsum;
 };
 
 const copyLoremIpsum = () =>{
-  new ClipboardJS('#btn-copy-lorem-ipsum');
+  new ClipboardJS("[data-js='btn-copy-lorem']");
 };
 
 const generateLoremIpsumEvent = () => {
-  const generateLoremIpsumBtn = document.getElementById("btn-generate-lorem-ipsum");
+  const generateLoremIpsumBtn = document.querySelector("[data-js='btn-generate-lorem']");
 
   generateLoremIpsumBtn?.addEventListener("click", () => {
     const loremIpsumType = getLoremIpsumTypeInputValue();

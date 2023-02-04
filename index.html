@@ -12,30 +12,31 @@
       <h1 class="title">Lorem Ipsum Generator</h1>
       <form class="lorem-ipsum-form">
         <fieldset>
-          <textarea class="lorem-ipsum-text-area" id="lorem-ipsum-text" readonly></textarea>
-          <button type="button" class="copy-lorem-ipsum-btn" id="btn-copy-lorem-ipsum" data-clipboard-target="#lorem-ipsum-text">
+          <textarea class="lorem-ipsum-text-area" data-js="lorem-text" readonly></textarea>
+          <button type="button" class="copy-lorem-ipsum-btn" data-js="btn-copy-lorem"
+          data-clipboard-target="[data-js='lorem-text']">
             <i class="fa-regular fa-copy fa-xl"></i>
           </button>
         </fieldset>
         <fieldset>
           <div class="lorem-ipsum-container-input">
             <label for="word">Word</label>
-            <input type="radio" id="word" name="lorem-ipsum-type" value="word" checked> 
+            <input type="radio" id="word" name="lorem-ipsum-type" data-js="lorem-input-type" value="word" checked> 
           </div>
           <div class="lorem-ipsum-container-input">
             <label for="sentence">Sentence</label>
-            <input type="radio" id="sentence" name="lorem-ipsum-type" value="sentence">
+            <input type="radio" id="sentence" name="lorem-ipsum-type" data-js="lorem-input-type" value="sentence">
           </div>
           <div class="lorem-ipsum-container-input">
             <label for="paragraph">Paragraph</label>
-            <input type="radio" id="paragraph" name="lorem-ipsum-type" value="paragraph">
+            <input type="radio" id="paragraph" name="lorem-ipsum-type" data-js="lorem-input-type" value="paragraph">
           </div>
         </fieldset>
         <fieldset>
           <label for="quantity">Quantity</label>
-          <input type="number" id="quantity" name="lorem-ipsum-quantity" id="quantity" value="1" min="1">
+          <input type="number" id="quantity" name="lorem-ipsum-quantity" data-js="lorem-input-quantity" value="1" min="1">
         </fieldset>
-        <button type="button" class="btn-generate-lorem-ipsum" id="btn-generate-lorem-ipsum">Generate my text</button>
+        <button type="button" class="btn-generate-lorem-ipsum" data-js="btn-generate-lorem">Generate my text</button>
       </form>
     </main>
     <script type="module" src="/src/main.ts"></script>
