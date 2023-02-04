@@ -1,4 +1,4 @@
-# Fizz Buzz
+# Gerador de Lorem Ipsum
 ## Tabela de Conteúdo
 - [Sobre](#about)
 - [Começando](#getting_started)
