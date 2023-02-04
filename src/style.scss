@@ -2,7 +2,31 @@
 
 $primary-300: #CC9090;
 $neutral-900: #150B0B;
+$neutral-200: #CFC6C6;
 $neutral-100: #EBEAEA;
+
+%font-text{
+  font-family: 'Source Sans Pro', serif;
+}
+
+%font-title{
+  font-family: 'Libre Baskerville', serif;
+}
+
+%border-style{
+  border: 2px solid $neutral-900;
+}
+
+%margin-x-center{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+%flex-row-xy-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 *{
   margin: 0;
@@ -22,49 +46,129 @@ html{
 }
 
 .title{
-  font-size: 5rem;
+  font-size: 30px;
   text-align: center;
   padding-top: 25rem;
   margin-bottom: 5rem;
-  font-family: 'Libre Baskerville', serif;
   color: $neutral-900;
+  max-width: 45rem;
+  @extend %font-title;
+  @extend %margin-x-center;
+
+  @media (min-width: 600px){
+    font-size: 40px;
+  }
 }
 
-#lorem-ipsum-text{
-  width: 41rem;
+.lorem-ipsum-text-area{
+  width: 100%;
   height: 20rem;
   display: block;
-  margin: 0 auto;
   background: $neutral-100;
-  border: 2px solid #150B0B;
-  font-size: 1.5rem;
-  font-family: 'Source Sans Pro', serif;
+  font-size: 12px;
   padding: 2rem;
-  margin-bottom: 2rem;
   resize: none;
+  outline: none;
+  @extend %font-text;
+  @extend %border-style;
+
+  @media (min-width: 600px){
+    height: 30rem;
+    font-size: 14px;
+  }
 }
 
-.lorem-ipsum-inputs{
-  padding-left: 4rem;
-}
-
-#btn-generate-lorem-ipsum{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 10px;
+.btn-generate-lorem-ipsum{
   width: 20rem;
   height: 7rem;
   margin-top: 5rem;
   border-radius: 4px;
   background-color: $primary-300;
   border: 0;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Source Sans Pro', serif;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 16px;
+  @extend %margin-x-center;
+  @extend %font-text;
+  @extend %flex-row-xy-center;
+  
+  &:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 1px #b9afaf;
+  }
+
+  &:active{
+    transform: translateY(1px);
+  }
+
+  @media (min-width: 600px){
+    width: 22rem;
+    height: 9rem;
+  }
 }
 
+.lorem-ipsum-form{
+  width: 41rem;
+  max-width: 100%;
+  @extend %margin-x-center;
+
+  @media (min-width: 600px){
+    width: 55rem;
+  }
+
+  fieldset{
+    padding: 0 1rem;
+    font-size: 12px;
+    font-weight: 400;
+    @extend %font-text;
+
+    &:nth-of-type(2){
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+    }
+    
+    @media (min-width: 600px){
+      font-size: 16px;
+    }
+
+    input {
+      margin-right: 2rem;
+      margin-left: 1rem;
+      cursor: pointer;
+
+      &[type="radio"]{
+        appearance: none;
+        width: 2rem;
+        height: 2rem;
+        background-color: $neutral-200;
+        border-radius: 50%;
+
+        &:checked{
+          background-color: $neutral-900;
+        }
+      }
+
+      &[name="lorem-ipsum-quantity"]{
+        height: 3rem;
+        width: 5rem;
+        padding: 1rem;
+        background-color: $neutral-100;
+        font-size: 12px;
+        outline: none;
+        @extend %border-style;
+
+        @media (min-width: 600px){
+          width: 7rem;
+          height: 4rem;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.lorem-ipsum-container-input{
+  @extend %flex-row-xy-center;
+}
