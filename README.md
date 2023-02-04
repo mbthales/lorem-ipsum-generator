@@ -15,4 +15,4 @@ Um gerador de Lorem Ipsum. Você pode selecionar a quantidade e se quer palavras
 ## Feito Com <a name="build_with">
 - TypeScript
 - Vite
-- SASS
+- SCSS
