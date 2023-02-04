@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lorem Ipsum Generator</title>
     <link rel="stylesheet" href="./src/style.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <main>
       <h1 class="title">Lorem Ipsum Generator</h1>
       <form class="lorem-ipsum-form">
         <fieldset>
-          <textarea class="lorem-ipsum-text-area" id="lorem-ipsum-text" cols="30" rows="10"></textarea>
-          <!-- <button type="button" id="btn-copy-lorem-ipsum" data-clipboard-target="#lorem-ipsum-text">
-  Copy
-</button> -->
+          <textarea class="lorem-ipsum-text-area" id="lorem-ipsum-text" readonly></textarea>
+          <button type="button" class="copy-lorem-ipsum-btn" id="btn-copy-lorem-ipsum" data-clipboard-target="#lorem-ipsum-text">
+            <i class="fa-regular fa-copy fa-xl"></i>
+          </button>
         </fieldset>
         <fieldset>
           <div class="lorem-ipsum-container-input">
@@ -32,7 +33,7 @@
         </fieldset>
         <fieldset>
           <label for="quantity">Quantity</label>
-          <input type="number" id="quantity" name="lorem-ipsum-quantity" id="quantity" value="1">
+          <input type="number" id="quantity" name="lorem-ipsum-quantity" id="quantity" value="1" min="1">
         </fieldset>
         <button type="button" class="btn-generate-lorem-ipsum" id="btn-generate-lorem-ipsum">Generate my text</button>
       </form>
