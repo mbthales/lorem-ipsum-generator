@@ -1,195 +1,197 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap');
 
-$primary-300: #CC9090;
-$neutral-900: #150B0B;
-$neutral-200: #CFC6C6;
-$neutral-100: #EBEAEA;
+$primary-300: #cc9090;
+$neutral-900: #150b0b;
+$neutral-200: #cfc6c6;
+$neutral-100: #ebeaea;
 
-%font-text{
-  font-family: 'Source Sans Pro', serif;
+%font-text {
+	font-family: 'Source Sans Pro', serif;
 }
 
-%font-title{
-  font-family: 'Libre Baskerville', serif;
+%font-title {
+	font-family: 'Libre Baskerville', serif;
 }
 
-%border-style{
-  border: 2px solid $neutral-900;
+%border-style {
+	border: 2px solid $neutral-900;
 }
 
-%margin-x-center{
-  margin-right: auto;
-  margin-left: auto;
+%margin-x-center {
+	margin-right: auto;
+	margin-left: auto;
 }
 
-%flex-row-xy-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+%flex-row-xy-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
 }
 
-html{
-  font-size: 8px;
-  background-color: $neutral-100;
+html {
+	font-size: 8px;
+	background-color: $neutral-100;
 
-  &, body, main{
-    width: 100%;
-    height: 100%;
-  }
+	&,
+	body,
+	main {
+		width: 100%;
+		height: 100%;
+	}
 }
 
-.title{
-  font-size: 30px;
-  text-align: center;
-  padding-top: 25rem;
-  margin-bottom: 5rem;
-  color: $neutral-900;
-  max-width: 45rem;
-  @extend %font-title;
-  @extend %margin-x-center;
+.title {
+	font-size: 30px;
+	text-align: center;
+	padding-top: 25rem;
+	margin-bottom: 5rem;
+	color: $neutral-900;
+	max-width: 45rem;
+	@extend %font-title;
+	@extend %margin-x-center;
 
-  @media (min-width: 600px){
-    font-size: 40px;
-  }
+	@media (min-width: 600px) {
+		font-size: 40px;
+	}
 }
 
-.lorem-ipsum-text-area{
-  width: 100%;
-  height: 20rem;
-  display: block;
-  background: $neutral-100;
-  font-size: 12px;
-  padding: 2rem;
-  resize: none;
-  outline: none;
-  @extend %font-text;
-  @extend %border-style;
+.lorem-ipsum-text-area {
+	width: 100%;
+	height: 20rem;
+	display: block;
+	background: $neutral-100;
+	font-size: 12px;
+	padding: 2rem;
+	resize: none;
+	outline: none;
+	@extend %font-text;
+	@extend %border-style;
 
-  @media (min-width: 600px){
-    height: 30rem;
-    font-size: 14px;
-  }
+	@media (min-width: 600px) {
+		height: 30rem;
+		font-size: 14px;
+	}
 }
 
-.copy-lorem-ipsum-btn{
-  width: 3rem;
-  height: 3rem;
-  top: -4rem;
-  right: 2rem;
-  position: absolute;
-  background-color: transparent;
-  color: $neutral-900;
-  cursor: pointer;
+.copy-lorem-ipsum-btn {
+	width: 3rem;
+	height: 3rem;
+	top: -4rem;
+	right: 2rem;
+	position: absolute;
+	background-color: transparent;
+	color: $neutral-900;
+	cursor: pointer;
 
-  &:hover{
-    i{
-      color: $primary-300;
-    }
-  }
+	&:hover {
+		i {
+			color: $primary-300;
+		}
+	}
 }
 
-.btn-generate-lorem-ipsum{
-  width: 20rem;
-  height: 7rem;
-  margin-top: 5rem;
-  border-radius: 4px;
-  background-color: $primary-300;
-  border: 0;
-  font-weight: 600;
-  font-size: 16px;
-  @extend %margin-x-center;
-  @extend %font-text;
-  @extend %flex-row-xy-center;
-  
-  &:hover{
-    cursor: pointer;
-    box-shadow: 0px 0px 4px 1px #b9afaf;
-  }
+.btn-generate-lorem-ipsum {
+	width: 20rem;
+	height: 7rem;
+	margin-top: 5rem;
+	border-radius: 4px;
+	background-color: $primary-300;
+	border: 0;
+	font-weight: 600;
+	font-size: 16px;
+	@extend %margin-x-center;
+	@extend %font-text;
+	@extend %flex-row-xy-center;
 
-  &:active{
-    transform: translateY(1px);
-  }
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0px 0px 4px 1px #b9afaf;
+	}
 
-  @media (min-width: 600px){
-    width: 22rem;
-    height: 9rem;
-  }
+	&:active {
+		transform: translateY(1px);
+	}
+
+	@media (min-width: 600px) {
+		width: 22rem;
+		height: 9rem;
+	}
 }
 
-.lorem-ipsum-form{
-  width: 41rem;
-  max-width: 100%;
-  @extend %margin-x-center;
+.lorem-ipsum-form {
+	width: 41rem;
+	max-width: 100%;
+	@extend %margin-x-center;
 
-  @media (min-width: 600px){
-    width: 55rem;
-  }
+	@media (min-width: 600px) {
+		width: 55rem;
+	}
 
-  fieldset{
-    padding: 0 1rem;
-    font-size: 12px;
-    font-weight: 400;
-    @extend %font-text;
+	fieldset {
+		padding: 0 1rem;
+		font-size: 12px;
+		font-weight: 400;
+		@extend %font-text;
 
-    &:nth-of-type(1){
-      position: relative;
-    }
+		&:nth-of-type(1) {
+			position: relative;
+		}
 
-    &:nth-of-type(2){
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 100%;
-    }
-    
-    @media (min-width: 600px){
-      font-size: 16px;
-    }
+		&:nth-of-type(2) {
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 100%;
+		}
 
-    input {
-      margin-right: 2rem;
-      margin-left: 1rem;
-      cursor: pointer;
+		@media (min-width: 600px) {
+			font-size: 16px;
+		}
 
-      &[type="radio"]{
-        appearance: none;
-        width: 2rem;
-        height: 2rem;
-        background-color: $neutral-200;
-        border-radius: 50%;
+		input {
+			margin-right: 2rem;
+			margin-left: 1rem;
+			cursor: pointer;
 
-        &:checked{
-          background-color: $neutral-900;
-        }
-      }
+			&[type='radio'] {
+				appearance: none;
+				width: 2rem;
+				height: 2rem;
+				background-color: $neutral-200;
+				border-radius: 50%;
 
-      &[name="lorem-ipsum-quantity"]{
-        height: 3rem;
-        width: 5rem;
-        padding: 1rem;
-        background-color: $neutral-100;
-        font-size: 12px;
-        outline: none;
-        @extend %border-style;
+				&:checked {
+					background-color: $neutral-900;
+				}
+			}
 
-        @media (min-width: 600px){
-          width: 7rem;
-          height: 4rem;
-          font-size: 16px;
-        }
-      }
-    }
-  }
+			&[name='lorem-ipsum-quantity'] {
+				height: 3rem;
+				width: 5rem;
+				padding: 1rem;
+				background-color: $neutral-100;
+				font-size: 12px;
+				outline: none;
+				@extend %border-style;
+
+				@media (min-width: 600px) {
+					width: 7rem;
+					height: 4rem;
+					font-size: 16px;
+				}
+			}
+		}
+	}
 }
 
-.lorem-ipsum-container-input{
-  @extend %flex-row-xy-center;
+.lorem-ipsum-container-input {
+	@extend %flex-row-xy-center;
 }
