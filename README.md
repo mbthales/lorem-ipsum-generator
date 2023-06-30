@@ -1,18 +1,47 @@
-# Gerador de Lorem Ipsum
-## Tabela de Conteúdo
-- [Sobre](#about)
-- [Começando](#getting_started)
-- [Feito Com](#build_with)
-## Sobre <a name="about"></a>
-Um gerador de Lorem Ipsum. Você pode selecionar a quantidade e se quer palavras, parágrafos e até frases.
-## Começando <a name="getting_started"></a>
-### Pré-Requisitos
-- Node.js
-### Instalação
-- Clone este repositório na sua máquina
-- Instale os pacotes com `yarn` or `npm`
-- Rode o código com `yarn dev` or `npm run dev`
-## Feito Com <a name="build_with">
-- TypeScript
-- Vite
-- SCSS
+# Lorem Ipsum Generator
+
+## Content Table
+
+- [Lorem Ipsum Generator](#lorem-ipsum-generator)
+	- [Content Table](#content-table)
+	- [About ](#about-)
+	- [Getting Started ](#getting-started-)
+		- [Installation ](#installation-)
+		- [Running ](#running-)
+	- [Build With ](#build-with-)
+	- [Contributing ](#contributing-)
+
+## About <a name="about"></a>
+
+A Lorem Ipsum generator. It allows you to generate paragraphs, words, and sentences.
+
+## Getting Started <a name="getting_started"></a>
+
+### Installation <a name="installation"></a>
+
+-  You need to have Node JS >= 18.16.1 in your machine.
+-  Clone this repository.
+-  Run `yarn install` or `npm install`
+
+### Running <a name="running"></a>
+
+-  Run `yarn start` or `npm start`
+
+## Build With <a name="build_with"></a>
+
+-  Vite
+-  TypeScript
+-  HTML
+-  SCSS
+
+## Contributing <a name="contributing"></a>
+
+If you're interested in contributing, please follow these steps:
+
+1. Fork this repository and clone it to your local machine.
+2. Create a new branch for your contribution.
+3. Make your desired changes and improvements.
+4. Test your changes to ensure they work correctly.
+5. Commit your changes with a descriptive message.
+6. Push your changes to your forked repository.
+7. Open a pull request in this repository to submit your changes.
