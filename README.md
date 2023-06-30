@@ -25,7 +25,7 @@ A Lorem Ipsum generator. It allows you to generate paragraphs, words, and senten
 
 ### Running <a name="running"></a>
 
--  Run `yarn start` or `npm start`
+-  Run `yarn dev` or `npm dev`
 
 ## Build With <a name="build_with"></a>
 
