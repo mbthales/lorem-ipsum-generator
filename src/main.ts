@@ -1,68 +1,63 @@
 import { LoremIpsum } from 'lorem-ipsum'
 import ClipboardJS from 'clipboard'
 
-const getLoremIpsumTypeInputValue = () => {
-	const loremIpsumTypesInputs: NodeListOf<HTMLInputElement> =
-		document.querySelectorAll('[data-js="lorem-input-type"]')
-	let loremIpsumType = 'word'
-
-	loremIpsumTypesInputs.forEach(({ checked, value }) => {
-		if (checked) {
-			loremIpsumType = value
-		}
-	})
-
-	return loremIpsumType
-}
-
-const getLoremIpsumQuantityInputValue = () => {
-	const loremIpsumQuantityInput = <HTMLInputElement>(
-		document.querySelector('[data-js="lorem-input-quantity"]')
+function loremIpsumGenerator() {
+	const generateLoremEl = <HTMLElement>(
+		document.querySelector('[data-js="btn-generate-lorem"]')
 	)
-	const loremIpsumQuantityInputValue = loremIpsumQuantityInput.value
 
-	return parseFloat(loremIpsumQuantityInputValue)
-}
+	function loremType() {
+		const loremTypesEl: NodeListOf<HTMLInputElement> =
+			document.querySelectorAll('[data-js="lorem-input-type"]')
+		let loremType = 'word'
 
-const getLoremIpsum = (type: string, quantity: number) => {
-	const lorem = new LoremIpsum()
-	lorem.generateWords(1)
+		loremTypesEl.forEach(({ checked, value }) => {
+			if (checked) {
+				loremType = value
+			}
+		})
 
-	if (type === 'word') {
-		return lorem.generateWords(quantity)
-	} else if (type === 'sentence') {
-		return lorem.generateSentences(quantity)
-	} else if (type === 'paragraph') {
-		return lorem.generateParagraphs(quantity)
+		return loremType
 	}
-	return lorem.generateWords(quantity)
-}
 
-const putLoremIpsumInTextArea = (loremIpsum: string) => {
-	const loremIpsumTextArea = <HTMLInputElement>(
-		document.querySelector('[data-js="lorem-text"]')
-	)
+	function loremQuantity() {
+		const loremQuantityEl = <HTMLInputElement>(
+			document.querySelector('[data-js="lorem-input-quantity"]')
+		)
+		const loremQuantity = loremQuantityEl.value
 
-	loremIpsumTextArea.value = loremIpsum
-}
+		return Number(loremQuantity)
+	}
 
-const copyLoremIpsum = () => {
-	new ClipboardJS('[data-js="btn-copy-lorem"]')
-}
+	function getLorem(type: string, quantity: number) {
+		const lorem = new LoremIpsum()
 
-const generateLoremIpsumEvent = () => {
-	const generateLoremIpsumBtn = document.querySelector(
-		'[data-js="btn-generate-lorem"]'
-	)
+		const loremTypes: { [type: string]: string } = {
+			word: lorem.generateWords(quantity),
+			sentence: lorem.generateSentences(quantity),
+			paragraph: lorem.generateParagraphs(quantity),
+		}
 
-	generateLoremIpsumBtn?.addEventListener('click', () => {
-		const loremIpsumType = getLoremIpsumTypeInputValue()
-		const loremIpsumQuantity = getLoremIpsumQuantityInputValue()
-		const loremIpsum = getLoremIpsum(loremIpsumType, loremIpsumQuantity)
+		return loremTypes[type]
+	}
 
-		putLoremIpsumInTextArea(loremIpsum)
+	function displayLorem() {
+		const loremBoxEl = <HTMLInputElement>(
+			document.querySelector('[data-js="lorem-text"]')
+		)
+
+		loremBoxEl.value = getLorem(loremType(), loremQuantity())
+	}
+
+	const copyLorem = () => {
+		new ClipboardJS('[data-js="btn-copy-lorem"]')
+	}
+
+	generateLoremEl.addEventListener('click', () => {
+		displayLorem()
 	})
+
+	copyLorem()
 }
 
-generateLoremIpsumEvent()
-copyLoremIpsum()
+loremIpsumGenerator()
